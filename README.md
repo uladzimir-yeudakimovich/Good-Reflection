@@ -1,4 +1,4 @@
-# Good-Reflection
+# Reflection
 
 # <a href="http://uladzimir-yeudakimovich.github.io/reflection/">Open</a>
 # Do you want to see the validity?
