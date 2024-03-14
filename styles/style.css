@@ -48,7 +48,7 @@ header {
 
 /* Navigation */
 .nav-menu {
-    height: 72px;
+        height: 72px;
     margin-left: 250px;
 }
 
@@ -142,7 +142,8 @@ header {
     order: 1;
 }
 
-.image-block-30 {
+.image-block-30,
+.circle-block-30 {
     width: calc(30% - 10px);
     float: right;
     padding: 20px;
@@ -166,13 +167,17 @@ header {
 .circle {
     width: 350px;
     height: 350px;
-    position: relative;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .quarter {
     width: 50%;
     height: 50%;
-    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     overflow: hidden;
 }
 
@@ -241,6 +246,10 @@ footer {
 
 /* Mobile phones */
 @media screen and (max-width: 1200px) {
+    .nav-menu li {
+        margin: 25px 10px 5px 0px;
+    }
+
     .container {
         max-width: 100%;
         padding: 0 20px;
@@ -263,5 +272,10 @@ footer {
     .image-block-50,
     .text-block-70 {
         order: 2;
+    }
+
+    .circle-block-30 {
+        width: 100%;
+        margin-bottom: 30px;
     }
 }
