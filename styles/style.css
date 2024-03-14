@@ -55,7 +55,7 @@ header {
 }
 
 .nav-menu a:hover {
-	  color: yellow;
+	  color: #cc9900;
 }
 
 .nav-menu ul {
@@ -69,165 +69,136 @@ header {
     margin: 50px 10px 5px 20px;
 }
 
-/* Main Image Styles */
-.main-image {
+/* Main Styles */
+.general-information {
     background-image: url("../images/main-image.png");
     height: 200px;
     background-size: cover;
     background-position: center;
 }
 
-.section {
-    width: 100%;
-    height: 758px;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    align-content: stretch;
-}
-
-.section article {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-.section h2 {
-    margin: 45px 0 0 0;
-    color: #cc9900;
-    font-size: 36px;
-    font-weight: 400;
-    user-select: none;
-    cursor: default;
-    overflow: hidden;
-    max-height: 90px;
+.container {
+    min-height: 700px;
     text-align: center;
 }
 
-.section p {
-    margin: 25px 0;
-    color: #4c4c4c;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 24px;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 24px;
-    overflow: hidden;
+.container h2 {
+    padding-top: 100px;
+    margin-bottom: 20px;
+    color: #cc9900;
 }
 
-/* Image Styles */
-.image {
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    max-width: 100%;
+.content-wrapper {
+    max-width: 1200px;
     margin: 0 auto;
-    display: block;
-}
+  }
 
-/* Specific Section Styles */
-.about {
-    box-shadow: inset 0 0 50px rgba(1, 1, 1, 0.14);
-    overflow: hidden;
-    height: auto;
-    top: 0;
-}
-
-.about article {
-    height: 500px;
-}
-
-.trainers {
-    height: 100%;
-    padding-top: 75px;
-}
-
-.trainers article {
+.content {
     display: flex;
-}
-
-.trainers-picture {
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-between;
 }
 
-.trainers-picture img {
-    width: 300px;
-    height: 300px;
+.block-100 {
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: justify;
+}
+
+.text-block-50 {
+    width: calc(50% - 10px);
+    float: left;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: justify;
+    order: 1;
+}
+
+.image-block-50 {
+    width: calc(50% - 10px);
+    float: right;
+    padding: 20px;
+    box-sizing: border-box;
+    order: 2;
+}
+
+.text-block-70 {
+    width: calc(70% - 10px);
+    float: left;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: justify;
+    order: 1;
+}
+
+.image-block-30 {
+    width: calc(30% - 10px);
+    float: right;
+    padding: 20px;
+    box-sizing: border-box;
+    order: 2;
+}
+
+.image-border {
     border-radius: 50%;
     border: 5px solid rgba(255, 255, 255, 0.09);
 }
 
-.diagnosis-image {
-    background-image: url("../images/diagnosis.png");
-    width: 100%;
-    height: 345px;
+.block-100 img,
+.image-block-50 img,
+.image-block-30 img {
+    max-width: 100%;
+    height: auto;
 }
 
-.training-image {
-    background-image: url("../images/main-image.png");
-    width: 100%;
-    height: 250px;
-}
-
-.insights-image {
-    background-image: url("../images/insights.png");
-    width: 310px;
-    height: 300px;
-    border-radius: 50%;
-    border: 5px sod rgba(255, 255, 255, 0.09);
-}
-
-.workshops-image {
-    background-image: url("../images/workshops.png");
-    width: 500px;
-    height: 400px;
-}
-
-.coaching-image {
-    background-image: url("../images/coaching.png");
-    width: 500px;
-    height: 400px;
-}
-
-.contact-image {
-    background-image: url("../images/contact.png");
-    width: 700px;
-    height: 500px;
-}
-
-.trainers,
-.diagnosis,
-.training,
-.insights,
-.coaching {
+/* Dark theme */
+.dark-theme {
     background-color: rgba(0, 0, 0, 0.58);
-}
-
-.trainers > article > div > h2,
-.trainers > article > div > h3,
-.trainers > article > div > p,
-.diagnosis > article > h2,
-.diagnosis > article > p,
-.training > article > h2,
-.training > article > p,
-.insights > article > h2,
-.insights > article > p,
-.coaching > article > h2,
-.coaching > article > p {
     color: #ffffff;
 }
+
+.dark-theme h2 {
+    color: #ffffff;
+
+} 
 
 /* Footer */
 footer {
     background: #333;
     color: #fff;
     width: 100%;
+    padding: 20px 0;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+/* Mobile phones */
+@media screen and (max-width: 1200px) {
+    .container {
+        max-width: 100%;
+        padding: 0 20px;
+        box-sizing: border-box;
+    }
+
+    .text-block-50,
+    .image-block-50,
+    .text-block-70,
+    .image-block-30 {
+        width: 100%;
+        order: 0;
+    }
+
+    .text-block-50,
+    .image-block-30 {
+        order: 1;
+    }
+
+    .image-block-50,
+    .text-block-70 {
+        order: 2;
+    }
 }
